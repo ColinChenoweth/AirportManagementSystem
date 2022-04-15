@@ -1,0 +1,101 @@
+Abbreviation,AirportName,City,Size
+ATL,Hartsfield-Jackson Atlanta International Airport,Atlanta,100
+PEK,Beijing Capital International Airport,Beijing,99
+DXB,Dubai International Airport,Dubai,98
+LAX,Los Angeles International Airport,Los Angeles,97
+ORD,O'Hare International Airport,Chicago,96
+LHR,Heathrow Airport,London,95
+HND,Haneda Airport,Tokyo,94
+HKG,Hong Kong International Airport,Hong Kong,93
+PVG,Shanghai Pudong International Airport,Shanghai,92
+CDG,Charles de Gaulle International Airport,Paris,91
+AMS,Amsterdam Airport Schiphol,Amsterdam,90
+DFW,Dallas-Fort Worth International Airport,Dallas,89
+CAN,Guangzhou Baiyun International Airport,Guangzhou,88
+FRA,Frankfurt am Main International Airport,Frankfurt,87
+IST,Istanbul Ataturk Airport,Istanbul,86
+DEL,Indira Gandhi International Airport,Delhi,85
+CGK,Soekarno-Hatta International Airport,Jakarta,84
+SIN,Singapore Changi Airport,Singapore,83
+ICN,Incheon International Airport,Seoul,82
+DEN,Denver International Airport,Denver,81
+BKK,Suvarnabhumi Airport,Bangkok,80
+JFK,John F. Kennedy International Airport,New York,79
+KUL,Kuala Lumpur International Airport,Kuala Lumpur,78
+SFO,San Francisco International Airport,San Francisco,77
+MAD,Adolfo Suarez Madrid-Barajas Airport,Madrid,76
+CTU,Chengdu Shuangliu International Airport,Chengdu,75
+LAS,McCarran International Airport,Las Vegas,74
+BCN,Barcelona-El Prat Airport,Barcelona,73
+BOM,Chhatrapati Shivaji International Airport,Mumbai,72
+YYZ,Toronto Pearson International Airport,Toronto,71
+SEA,Seattle-Tacoma International Airport,Seattle,70
+CLT,Charlotte Douglas International Airport,Charlotte,69
+LGW,Gatwick Airport,London,68
+SZX,Shenzhen Bao'an International Airport,Shenzhen,67
+TPE,Taiwan Taoyuan International Airport,Taipei,66
+MEX,Mexico City International Airport,Mexico City,65
+KMG,Kunming Changshui International Airport,Kunming,64
+MUC,Munich Airport,Munich,63
+MCO,Orlando International Airport,Orlando,62
+MIA,Miami International Airport,Miami,61
+PHX,Phoenix Sky Harbor International Airport,Phoenix,60
+SYD,Sydney Airport,Sydney,59
+EWR,Newark Liberty International Airport,Newark,58
+MNL,Ninoy Aquino International Airport,Manila,57
+SHA,Shanghai Hongqiao International Airport,Shanghai,56
+XIY,Xi'an Xianyang International Airport,Xi'an,55
+FCO,Leonardo da Vinci-Fiumicino Airport,Rome,54
+IAH,George Bush Intercontinental Houston Airport,Houston,53
+NRT,Narita International Airport,Tokyo,52
+SVO,Sheremetyevo International Airport,Moscow,51
+CKG,Chongqing Jiangbei International Airport,Chongqing,50
+DMK,Don Mueang International Airport,Bangkok,49
+MSP,St Paul International Airport,Minneapolis,48
+GRU,Sao Paulo-Guarulhos International Airport,Sao Paulo,47
+BOS,Logan International Airport,Boston,46
+SGN,Tan Son Nhat International Airport,Ho Chi Minh City,45
+DOH,Hamad International Airport,Doha,44
+HGH,Hangzhou Xiaoshan International Airport,Hangzhou,43
+DTW,Detroit Metropolitan Wayne County Airport,Detroit,42
+JED,King Abdulaziz International Airport,Jeddah,41
+MEL,Melbourne Airport,Melbourne,40
+FLL,Fort Lauderdale Hollywood International Airport,Fort Lauderdale,39
+ORL,Orlando Executive Airport,Orlando,38
+SAW,Sabiha Gokcen International Airport,Istanbul,37
+BOG,El Dorado International Airport,Bogota,36
+DME,Moscow Domodedovo Airport,Moscow,35
+CJU,Jeju International Airport,Cheju,34
+LGA,LaGuardia Airport,New York,33
+PHL,Philadelphia International Airport,Philadelphia,32
+DUB,Dublin Airport,Dublin,31
+ZRH,Zurich Airport,Zurich,30
+CPH,Copenhagen Airport,Copenhagen,29
+KIX,Kansai International Airport,Osaka,28
+PMI,Palma De Mallorca Airport,Palma de Mallorca,27
+MAN,Manchester Airport,Manchester,26
+OSL,Oslo Gardermoen Airport,Oslo,25
+LIS,Lisbon Portela Airport,Lisbon,24
+ARN,Stockholm Arlanda Airport,Stockholm,23
+BWI,Washington International Thurgood Marshall Airport,Baltimore,22
+AYT,Antalya Airport,Antalya,21
+STN,London Stansted Airport,London,20
+NKG,Nanjing Lukou International Airport,Nanjing,19
+GMP,Gimpo International Airport,Seoul,18
+BLR,Kempegowda International Airport,Bangalore,17
+RUH,King Khaled International Airport,Riyadh,16
+BRU,Brussels Airport,Brussels,15
+DUS,Dusseldorf International Airport,Duesseldorf,14
+XMN,Xiamen Gaoqi International Airport,Xiamen,13
+VIE,Vienna International Airport,Vienna,12
+CGO,Zhengzhou Xinzheng International Airport,Zhengzhou,11
+SLC,Salt Lake City International Airport,Salt Lake City,10
+YVR,Vancouver International Airport,Vancouver,9
+DCA,Ronald Reagan Washington National Airport,Washington,8
+CSX,Changsha Huanghua International Airport,Changcha,7
+AUH,Abu Dhabi International Airport,Abu Dhabi,6
+CUN,Cancun International Airport,Cancun,5
+FUK,Fukuoka Airport,Fukuoka,4
+TAO,Liuting Airport,Qingdao,3
+BNE,Brisbane International Airport,Brisbane,2
+WUH,Wuhan Tianhe International Airport,Wuhan,1

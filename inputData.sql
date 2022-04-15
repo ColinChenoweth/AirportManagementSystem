@@ -1,0 +1,48 @@
+LOAD DATA LOCAL INFILE 'C:\\Users\\chenb\\Documents\\VS\\VS_School\\341\\airport.csv'
+INTO TABLE airport
+FIELDS TERMINATED BY ','
+ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\chenb\\Documents\\VS\\VS_School\\341\\schedule.csv'
+INTO TABLE schedule
+FIELDS TERMINATED BY ','
+ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\chenb\\Documents\\VS\\VS_School\\341\\plane.csv'
+INTO TABLE plane
+FIELDS TERMINATED BY ','
+ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\chenb\\Documents\\VS\\VS_School\\341\\customer.csv'
+INTO TABLE customer
+FIELDS TERMINATED BY ','
+ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\chenb\\Documents\\VS\\VS_School\\341\\seat.csv'
+INTO TABLE seat
+FIELDS TERMINATED BY ','
+ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\chenb\\Documents\\VS\\VS_School\\341\\ticket.csv'
+INTO TABLE ticket
+FIELDS TERMINATED BY ','
+ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\chenb\\Documents\\VS\\VS_School\\341\\airline_company.csv'
+INTO TABLE airline_company
+FIELDS TERMINATED BY ','
+ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
