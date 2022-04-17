@@ -5,11 +5,13 @@ class amsInterface {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ams", "root", "password");
         Statement st = con.createStatement();
-        ResultSet rs = st.executeQuery("SELECT p.aircraftID FROM Plane p, Schedule s1, Schedule s2"
-                                        + "WHERE p.aircraftID = s1.aircraftID AND c.p.aircraftID = s2.aircraftID AND s1.DepartDate = s2.DepartDate");
+        ResultSet rs = st.executeQuery("SELECT * FROM seat s "
+                                        + "WHERE s.Class = 'Economy'");
 
         while (rs.next()) {
-            System.out.println(rs.getString("aircraftID"));
+            System.out.print(rs.getString("AircraftID") + ",");
+            System.out.print(rs.getString("SeatNum") + ",");
+            System.out.println(rs.getString("Class")+"");
         }
 
         con.close();

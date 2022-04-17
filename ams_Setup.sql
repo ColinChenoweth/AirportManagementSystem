@@ -87,7 +87,7 @@ DROP TABLE IF EXISTS ams.Airline_Company ;
 CREATE TABLE IF NOT EXISTS ams.Airline_Company (
   AirlineName 	VARCHAR(50) PRIMARY KEY,
   CEO 			VARCHAR(50) NOT NULL,
-  HomeAirport	VARCHAR(3) NULL
+  HomeAirport	VARCHAR(3) 	NULL
 	REFERENCES Airport(Abbreviation));
 
 
