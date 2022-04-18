@@ -15,7 +15,7 @@ class amsInterface {
         Boolean Exit = false;
         while(!Exit){
             System.out.println("Enter an option number below.");
-            System.out.println("1: Input SQL query");
+            System.out.println("1: Input SQL code");
             System.out.println("2: Run a premade query");
             System.out.println("3: Exit");
             System.out.print("Option Selection: ");
@@ -34,30 +34,32 @@ class amsInterface {
                     Statement st = con.createStatement();
                     ResultSet rs = st.executeQuery(query);
                     
-                    ArrayList<String> columns = new ArrayList<String>();
-                    String temp = query;
-                    while(!temp.toLowerCase().endsWith("from")){
-                        temp = temp.substring(0, temp.length()-1);
-                    }
-
-                    temp = temp.substring(0, temp.length()-5);
-                    
-                    while(!temp.toLowerCase().endsWith("select ")){
-                        String col = "";
-                        while(!temp.endsWith(", ") && !temp.toLowerCase().endsWith("select ")){
-                            col = temp.substring(temp.length() - 1) + col;
-                            temp = temp.substring(0, temp.length() - 1);
+                    if(query.substring(0,6).toLowerCase().equals("select")){
+                        ArrayList<String> columns = new ArrayList<String>();
+                        String temp = query;
+                        while(!temp.toLowerCase().endsWith("from")){
+                            temp = temp.substring(0, temp.length()-1);
                         }
-                        if(temp.endsWith(", "))
-                            temp = temp.substring(0, temp.length()-2);
-                        columns.add(col);
-                    }
 
-                    while (rs.next()) {
-                        for (int x = 0; x < columns.size() - 1; x++){
-                            System.out.print(rs.getString(columns.get(x)) + ", ");
+                        temp = temp.substring(0, temp.length()-5);
+
+                        while(!temp.toLowerCase().endsWith("select ")){
+                            String col = "";
+                            while(!temp.endsWith(", ") && !temp.toLowerCase().endsWith("select ")){
+                                col = temp.substring(temp.length() - 1) + col;
+                                temp = temp.substring(0, temp.length() - 1);
+                            }
+                            if(temp.endsWith(", "))
+                                temp = temp.substring(0, temp.length()-2);
+                            columns.add(col);
                         }
-                        System.out.println(rs.getString(columns.get(columns.size()-1)));
+
+                        while (rs.next()) {
+                            for (int x = 0; x < columns.size() - 1; x++){
+                                System.out.print(rs.getString(columns.get(x)) + ", ");
+                            }
+                            System.out.println(rs.getString(columns.get(columns.size()-1)));
+                        }
                     }
                 }
                 catch(Exception e) {
