@@ -16,9 +16,8 @@ class amsInterface {
         while(!Exit){
             System.out.println("Enter an option number below.");
             System.out.println("1: Input SQL query");
-            System.out.println("2: Write SQL with a helper");
-            System.out.println("3: Run a premade query");
-            System.out.println("4: Exit");
+            System.out.println("2: Run a premade query");
+            System.out.println("3: Exit");
             System.out.print("Option Selection: ");
             
             int opt = Integer.parseInt(in.nextLine());
@@ -66,15 +65,12 @@ class amsInterface {
                 }
             }
             else if(opt == 2){
-
-            }
-            else if(opt == 3){
                 System.out.println("Enter an query number below.");
                 System.out.println("1: List people who will fly into BWI from bigger airport on April 28, 2023.");
                 System.out.println("2: List people who will fly first class more than once with the same company.");
                 System.out.println("3: Rank the airline companies in terms of sales of first class tickets in ascending order.");
                 System.out.println("4: List the customers who will fly on their birthdays.");
-                System.out.print("Query3 Selection: ");
+                System.out.print("Query Selection: ");
 
                 int query = Integer.parseInt(in.nextLine());
 
@@ -92,7 +88,7 @@ class amsInterface {
                 }
                 System.out.println();
             }
-            else if(opt == 4){
+            else if(opt == 3){
                 Exit = true;
             }
             else{
@@ -101,24 +97,6 @@ class amsInterface {
                 System.out.println();
             }
         }
-
-
-        // dateQuery(con);
-        // multipleFirstQuery(con);
-        // salesQuery(con);
-        // birthdayQuery(con);
-        
-        // Statement st = con.createStatement();
-        // ResultSet rs = st.executeQuery("SELECT * FROM seat s "
-        //                                 + "WHERE s.Class = 'Economy'");
-
-        // while (rs.next()) {
-        //     System.out.print(rs.getString("AircraftID") + ",");
-        //     System.out.print(rs.getString("SeatNum") + ",");
-        //     System.out.println(rs.getString("Class")+"");
-        // }
-
-        // con.close();
     }
 
     private static void setup() throws Exception{
