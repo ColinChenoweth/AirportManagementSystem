@@ -24,15 +24,16 @@ class amsInterface {
                 System.out.println("Type \"END\" on its own line when done writing your query.");
                 String query = "";
                 String nl = in.nextLine();
-                while(!nl.equals("END")){
+                while(!nl.toLowerCase().equals("end")){
                     query += nl + " ";
                     nl = in.nextLine();
                 }
                 try{
                     Statement st = con.createStatement();
-                    ResultSet rs = st.executeQuery(query);
-                    
+
                     if(query.substring(0,6).toLowerCase().equals("select")){
+                        ResultSet rs = st.executeQuery(query);
+
                         ArrayList<String> columns = new ArrayList<String>();
                         String temp = query;
                         while(!temp.toLowerCase().endsWith("from")){
@@ -53,12 +54,16 @@ class amsInterface {
                         }
 
                         while (rs.next()) {
-                            for (int x = 0; x < columns.size() - 1; x++){
+                            for (int x = columns.size() - 1; x > 0; x--){
                                 System.out.print(rs.getString(columns.get(x)) + ", ");
                             }
-                            System.out.println(rs.getString(columns.get(columns.size()-1)));
+                            System.out.println(rs.getString(columns.get(0)));
                         }
                     }
+                    else{
+                        st.executeUpdate(query);
+                    }
+
                 }
                 catch(Exception e) {
                     e.printStackTrace();
