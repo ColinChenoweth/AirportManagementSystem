@@ -20,6 +20,8 @@ class amsInterface {
             
             int opt = Integer.parseInt(in.nextLine());
             
+            System.out.println();
+
             if(opt == 1){
                 System.out.println("Type \"END\" on its own line when done writing your query.");
                 String query = "";
@@ -72,9 +74,11 @@ class amsInterface {
             else if(opt == 2){
                 System.out.println("Enter an query number below.");
                 System.out.println("1: List people who will fly into BWI from bigger airport on April 28, 2023.");
-                System.out.println("2: List people who will fly first class more than once with the same company.");
+                System.out.println("2: List people who will fly first class more than three times with the same company.");
                 System.out.println("3: Rank the airline companies in terms of sales of first class tickets in ascending order.");
                 System.out.println("4: List the customers who will fly on their birthdays.");
+                System.out.println("5: List the customers who will never fly first class.");
+                System.out.println("6: Go back.");
                 System.out.print("Query Selection: ");
 
                 int query = Integer.parseInt(in.nextLine());
@@ -87,6 +91,9 @@ class amsInterface {
                     salesQuery(con);
                 else if(query == 4)
                     birthdayQuery(con);
+                else if(query == 5)
+                    neverFirstQuery(con);
+                else if(query == 6){}
                 else{
                     System.out.println("Invalid option");
                     System.out.println();
@@ -140,7 +147,7 @@ class amsInterface {
                                                 + " s.AircraftID = p.AircraftID AND"
                                                 + " s.Class = \"First\""
                                         + " GROUP BY c.CustName, p.AirlineName"
-                                        + " HAVING count(c.PassportNum) > 2;");
+                                        + " HAVING count(c.PassportNum) > 3;");
 
         while (rs.next()) {
             System.out.print(rs.getString("CustName") + ", ");
@@ -178,4 +185,24 @@ class amsInterface {
             System.out.println(rs.getString("CustName"));        }
     }
 
+    private static void neverFirstQuery(Connection con) throws Exception{
+        Statement st = con.createStatement();
+        ResultSet rs = st.executeQuery("SELECT Distinct c.CustName"
+                                        + " FROM Customer c, Ticket t, Seat s, Plane p"
+                                        + " WHERE c.PassportNum = t.PassportNum AND"
+                                                + " t.SeatNum = s.SeatNum AND"
+                                                + " t.AircraftID = p.AircraftID AND"
+                                                + " s.AircraftID = p.AircraftID AND"
+                                                + " s.Class <> \"First\" AND"
+                                                + " c.CustName NOT IN (SELECT c.CustName"
+                                                                    + " FROM Customer c, Ticket t, Seat s, Plane p"
+                                                                    + " WHERE t.seatNum = s.SeatNum AND"
+                                                                            + " c.PassportNum = t.PassportNum AND"
+                                                                            + " t.AircraftID = p.AircraftID AND"
+                                                                            + " s.AircraftID = p.AircraftID AND"
+                                                                            + " s.Class = \"First\" );");
+
+        while (rs.next()) {
+            System.out.println(rs.getString("CustName"));        }
+    }
 }
