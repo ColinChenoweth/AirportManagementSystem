@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 class amsInterface {
     public static void main(String[] args) throws Exception {
+        // Ensure that lines 12, 122, 124, 126, 128, 130, and 133 are all correct before running
+        
         Class.forName("com.mysql.cj.jdbc.Driver");
+        //make sure the platform (currently mysql), server (currently localhost), port (currently 3306), and database (currently ams) are all correct
+        //also make sure you are using the correct user and password (currently root and password)
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ams", "root", "password");
         Scanner in = new Scanner(System.in);
         
@@ -112,9 +116,21 @@ class amsInterface {
     }
 
     private static void setup() throws Exception{
+        // Opens command prompt to run two files to makes sure tables are made correctly and the default data is added
         Runtime.getRuntime().exec("cmd /c start cmd.exe /K "
-                                + "\"\"C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql.exe\" -h localhost -u root -ppassword ams --local-infile=1 < \"C:\\Users\\chenb\\Documents\\GitHub\\AirportManagementSystem\\ams_Setup.sql\" "
-                                + "&& \"C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql.exe\" -h localhost -u root -ppassword ams --local-infile=1 < \"C:\\Users\\chenb\\Documents\\GitHub\\AirportManagementSystem\\inputData.sql\" "
+                                // File location for mysql.exe
+                                + "\"\"C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql.exe\""
+                                // Ensure server, user, password are all correct
+                                + " -h localhost -u root -ppassword ams --local-infile=1 < "
+                                // File location of ams_setup.sql
+                                + "\"C:\\Users\\chenb\\Documents\\GitHub\\AirportManagementSystem\\ams_Setup.sql\" "
+                                // File location for mysql.exe again
+                                + "&& \"C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql.exe\""
+                                // Ensure server, user, and password are all correct
+                                + " -h localhost -u root -ppassword ams --local-infile=1 < "
+                                // File location of inputData.sql
+                                // Remember to edit the location of the data files in inputData.sql
+                                + "\"C:\\Users\\chenb\\Documents\\GitHub\\AirportManagementSystem\\inputData.sql\" "
                                 + "&& exit\"");
     }
 
