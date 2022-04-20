@@ -7,7 +7,7 @@ If you are wanting to test this database, make sure you check the comments in th
 
 This is the ER Diagram we attempted to create with our database:
 
-![Alt text](relative/ER-Diagram.jpg?raw=true)
+![Alt text](ER-Diagram.jpg?raw=true)
 
 
 
