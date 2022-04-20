@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS ams.Seat (
 CREATE TABLE IF NOT EXISTS ams.Schedule (
   FlightNum 	INT 		PRIMARY KEY,
   DepartTime 	INT 		NULL,
-  DepartDate 	int			NULL,
+  DepartDate 	INT			NULL,
   FlightStatus 	VARCHAR(50) NOT NULL,
   AircraftID 	INT			NULL,
   DestAirport	VARCHAR(3) NOT NULL,
@@ -123,8 +123,8 @@ CREATE TABLE IF NOT EXISTS ams.Ticket (
 	REFERENCES Schedule(FlightNum)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT AircraftID_Ticket_fk FOREIGN KEY (AircraftID)
-	REFERENCES Plane(AircraftID)
-    ON DELETE SET NULL
+  CONSTRAINT SeatNum_AircaftID_fk FOREIGN KEY (SeatNum, AircraftID)
+	REFERENCES Seat(SeatNum, AircraftID)
+    ON DELETE CASCADE
     ON UPDATE CASCADE)
   ENGINE = InnoDB;
