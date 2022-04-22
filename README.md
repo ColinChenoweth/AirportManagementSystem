@@ -1,5 +1,5 @@
 # AirportManagementSystem
-Database Systems project where we created a database for managing specific data related to airports/flights.
+Database Systems project where we (Leann Blanc, Hiroki Nakayama, and I) created a database for managing specific data related to airports/flights.
 
 If you are wanting to test this database, make sure you check the comments in the amsInterface.java file for what lines to possibly edit to ensure it runs properly. Also check that the data file locations in dataInput.sql are correct for your setup.
 
